@@ -83,11 +83,11 @@ resource "aws_db_instance" "rds_pg" {
   vpc_security_group_ids = [aws_security_group.rds_sg.id]
   publicly_accessible    = false                                          //secure (No Internet access)
 
-  # Multi-AZ (disabled for free tier)
-  multi_az = false
+  # Multi-AZ (set var.rds_multi_az = true for production)
+  multi_az = var.rds_multi_az
 
-  # Automated backups (disabled for free tier)
-  backup_retention_period    = 0
+  # Automated backups (set var.rds_backup_retention_days = 7 for production)
+  backup_retention_period    = var.rds_backup_retention_days
   copy_tags_to_snapshot      = true
   final_snapshot_identifier  = "rds-pg-final-snapshot"
   skip_final_snapshot        = false

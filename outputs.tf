@@ -4,22 +4,22 @@ output "vpc_id" {
 }
 
 output "public_subnet_1_id" {
-  description = "Public subnet 1 ID (ap-south-1a)"
+  description = "Public subnet 1 ID (us-west-1a)"
   value       = module.infra.public_subnet_1_id
 }
 
 output "public_subnet_2_id" {
-  description = "Public subnet 2 ID (ap-south-1b)"
+  description = "Public subnet 2 ID (us-west-1b)"
   value       = module.infra.public_subnet_2_id
 }
 
 output "private_subnet_1_id" {
-  description = "Private subnet 1 ID (ap-south-1a)"
+  description = "Private subnet 1 ID (us-west-1a)"
   value       = module.infra.private_subnet_1_id
 }
 
 output "private_subnet_2_id" {
-  description = "Private subnet 2 ID (ap-south-1b)"
+  description = "Private subnet 2 ID (us-west-1b)"
   value       = module.infra.private_subnet_2_id
 }
 

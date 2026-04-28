@@ -75,3 +75,15 @@ variable "environment" {
   type        = string
   default     = "production"
 }
+
+variable "rds_multi_az" {
+  description = "Enable Multi-AZ deployment for RDS (production: true, free tier: false)"
+  type        = bool
+  default     = false  # Set to true for production
+}
+
+variable "rds_backup_retention_days" {
+  description = "Number of days to retain automated backups (production: 7, free tier: 0)"
+  type        = number
+  default     = 0  # Set to 7 for production
+}

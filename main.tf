@@ -24,5 +24,7 @@ module "infra" {
   rds_instance_class    = var.rds_instance_class
   rds_allocated_storage = var.rds_allocated_storage
   rds_engine_version    = var.rds_engine_version
+  rds_multi_az          = var.rds_multi_az
+  rds_backup_retention_days = var.rds_backup_retention_days
   environment           = var.environment
 }
